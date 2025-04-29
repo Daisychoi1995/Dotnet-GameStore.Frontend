@@ -1,0 +1,37 @@
+# Build results
+bin/
+obj/
+
+# Rider / VSCode / Visual Studio files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vs/
+
+# ASP.NET temporary files
+**/wwwroot/
+
+# NuGet packages
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Logs
+*.log
+
+# Environment
+.env
+secrets.json
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Publish output
+publish/

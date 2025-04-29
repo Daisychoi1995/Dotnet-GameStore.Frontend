@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using Models
 
 <PageTitle>Game Catalog</PageTitle>
 
@@ -12,6 +13,42 @@
     <th></th>
   </thead>
   <tbody>
-    
+    @foreach (var game in games){
+        <tr>
+          <td>@game.Id</td>
+          <td>@game.Name</td>
+          <td>@game.Genre</td>
+          <td>@game.Price</td>
+          <td>@game.ReleaseDate</td>
+          <td></td>
+        </tr>
+    }
   </tbody>
 </table>
+
+@code {
+    private GameSummary[] games = 
+    [
+        new() {
+          Id = 1,
+          Name = "Street Fighter",
+          Genre = "Fighting",
+          Price = 19.99M,
+          ReleaseDate = new DateOnly(1992, 7, 15)
+        },
+        new() {
+          Id = 2,
+          Name = "Final Fantasy",
+          Genre = "Roleplaying",
+          Price = 59.99M,
+          ReleaseDate = new DateOnly(2010, 9, 30)
+        },
+        new() {
+          Id = 3,
+          Name = "FIFA",
+          Genre = "Sports",
+          Price = 69.99M,
+          ReleaseDate = new DateOnly(2022, 9, 27)
+        },
+    ];
+}

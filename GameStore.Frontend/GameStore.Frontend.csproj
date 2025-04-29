@@ -1,6 +1,9 @@
+<!-- import dependencies for web project .NET core -->
+<!-- declair any dependencies and nugat pkg -->
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
+  <!-- api from .net sdk for my application -->
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>

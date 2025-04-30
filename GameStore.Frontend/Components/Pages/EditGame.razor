@@ -13,7 +13,8 @@ else
 {
   <div class="row">
     <div class="col-md-4">
-      <EditForm Model="@game" FormName="editGame" OnSubmit="HandleSubmit">
+      <EditForm Model="@game" FormName="editGame" OnValidSubmit="HandleSubmit">
+        <DataAnnotationsValidator />
         <div class="mb-3">
           <label for="name" class="form-label">Name: </label>
           <InputText id="name" @bind-Value="game.Name" class="form-control" />

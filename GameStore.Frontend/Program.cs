@@ -4,7 +4,8 @@ using GameStore.Frontend.Components;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents();
+builder.Services.AddRazorComponents()
+                .AddInteractiveServerComponents();
 builder.Services.AddSingleton<GamesClient>();
 builder.Services.AddSingleton<GenresClient>();
 
@@ -26,6 +27,8 @@ app.UseAntiforgery();
 //if its not dynaamic, supply as they are. static files(http, css etc)
 app.MapStaticAssets();
 //configure middleware, figure all of component from here
-app.MapRazorComponents<App>();
+app.MapRazorComponents<App>()
+   .AddInteractiveServerRenderMode();
+
 //ready to service app
 app.Run();
